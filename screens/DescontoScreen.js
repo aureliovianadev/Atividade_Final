@@ -1,17 +1,21 @@
 import { useState } from 'react'
 import { View, Text, StyleSheet, TextInput, Button } from 'react-native'
 
-export default function Desconto() {
+export default function DescontoScreen() {
 
     const [preco, setPreco] = useState('')
     const [porcentagem, setPorcentagem] = useState('')
     const [preco_final, setPreco_final] = useState('')
+    const [valor_desconto, setValor_desconto] = useState('')
 
-    function calculardesconto() {
-        setPreco_final(parseFloat(preco)-(parseFloat(preco) * parseInt(porcentagem/100)))
+   
+    function valor_desconto() {
+        setValor_desconto((parseFloat(preco) * parseInt(porcentagem/100)))
     }
     
-    
+     function calculardesconto() {
+        setPreco_final(parseFloat(preco)-(parseFloat(preco) * parseInt(porcentagem/100)))
+    }
     return (
         <View>
             <Text>Desconto</Text>
@@ -34,7 +38,8 @@ export default function Desconto() {
                     onPress={() => calculardesconto()}
                 />
             </View>
-            
+
+            <Text>valor_desconto: {valor_desconto}</Text>
             <Text>preco_final: {preco_final}</Text>
 
         </View>
