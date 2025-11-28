@@ -8,7 +8,7 @@ import DescontoScreen from './screens/DescontoScreen';
 
 const Stack = createStackNavigator()
 
-export default function AppStack(){
+export default function App(){
   return(
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Home'>

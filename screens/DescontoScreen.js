@@ -9,16 +9,16 @@ export default function DescontoScreen() {
     const [valor_desconto, setValor_desconto] = useState('')
 
    
-    function valor_desconto() {
-        setValor_desconto((parseFloat(preco) * parseInt(porcentagem/100)))
+    function valor_do_desconto() {
+        setValor_desconto((parseFloat(preco) * (parseInt(porcentagem)/100)))
     }
     
      function calculardesconto() {
-        setPreco_final(parseFloat(preco)-(parseFloat(preco) * parseInt(porcentagem/100)))
+        setPreco_final(parseFloat(preco)-(parseFloat(preco) * (parseInt(porcentagem)/100)))
     }
     return (
         <View>
-            <Text>Desconto</Text>
+            <Text>Calcular o Desconto do Produto</Text>
 
             <TextInput
                 placeholder="Digite o valor do produto"
@@ -32,12 +32,15 @@ export default function DescontoScreen() {
                 onChangeText={setPorcentagem}
             />
 
-            <View style={estilos.botao}>
-                <Button
-                    title="Calcular"
-                    onPress={() => calculardesconto()}
-                />
-            </View>
+          <View style={estilos.botao}>
+    <Button
+        title="Calcular"
+        onPress={() => {
+            calculardesconto();  
+            valor_do_desconto(); 
+        }}
+    />
+</View>
 
             <Text>valor_desconto: {valor_desconto}</Text>
             <Text>preco_final: {preco_final}</Text>
