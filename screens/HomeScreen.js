@@ -14,7 +14,7 @@ export default function HomeScreen({navigation}) {
             <View style={estilos.botao}>
                 <Button
                     title='Ir para Carros '
-                    onPress={() => navigation.navigate('')}
+                    onPress={() => navigation.navigate('Carros')}
                 />
             </View>
         </View>
