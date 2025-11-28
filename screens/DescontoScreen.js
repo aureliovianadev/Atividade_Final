@@ -50,7 +50,40 @@ export default function DescontoScreen() {
 }
 
 const estilos = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#f5f5f5',
+        padding: 20,
+    },
+    titulo: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginBottom: 20,
+        color: '#333',
+    },
+    input: {
+        width: '100%',
+        height: 50,
+        backgroundColor: '#fff',
+        borderColor: '#ddd',
+        borderWidth: 1,
+        borderRadius: 8,
+        paddingLeft: 10,
+        marginVertical: 10,
+        fontSize: 16,
+    },
     botao: {
-        marginVertical: 10
-    }
+        width: '100%',
+        marginVertical: 20,
+        borderRadius: 8,
+        overflow: 'hidden',
+    },
+    resultado: {
+        fontSize: 18,
+        marginVertical: 5,
+        color: '#333',
+        fontWeight: '500',
+    },
 })

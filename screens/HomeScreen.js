@@ -4,12 +4,7 @@ export default function HomeScreen({navigation}) {
     return (
         <View style={estilos.container}>
             <Text>Tela inicial</Text>
-            <View style={estilos.botao}>
-                <Button
-                    title='Ir para Home'
-                    onPress={() => navigation.navigate('Home')}
-                />
-            </View>
+
             <View style={estilos.botao}>
                 <Button
                     title='Ir para o Desconto'
@@ -18,7 +13,7 @@ export default function HomeScreen({navigation}) {
             </View>
             <View style={estilos.botao}>
                 <Button
-                    title='Ir para '
+                    title='Ir para Carros '
                     onPress={() => navigation.navigate('')}
                 />
             </View>

@@ -1,8 +1,8 @@
 import { View, FlatList, Text, StyleSheet } from 'react-native'
 import { Card } from 'react-native-paper'
 
-export default function AppComDbLocal() {
-
+export default function CarroScreen() {
+    
   const carros = [
     {
       id: 1,
